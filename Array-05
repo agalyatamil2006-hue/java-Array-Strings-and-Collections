@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+       
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int[] homes = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            homes[i] = sc.nextInt();
+        }
+
+        int address = sc.nextInt();
+
+        int pos = -1;
+
+        for (int i = 0; i < n; i++) {
+            if (homes[i] == address) {
+                pos = i;
+                break;
+            }
+        }
+
+        if (pos != -1) {
+            System.out.printf("Door Number is %03d-DN", pos);
+        } else {
+            System.out.println("-1");
+        }
+
+        sc.close();
+    }
+} 
+    
+
